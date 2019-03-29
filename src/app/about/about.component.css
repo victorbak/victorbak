@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/emile-perron-190221-unsplash.jpg");
+    background-position: top-left;
+    background-size: cover;
+}
+    
+
+.card {
+    width: 40%;
+    margin-left: 100px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: black;
+    opacity: .7;
+}
+
+.text {
+    color: azure;
+    opacity: 1;
+}

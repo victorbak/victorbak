@@ -9,6 +9,9 @@ export class CoverComponent implements OnInit {
 
   constructor() { }
 
+  name = "Victor Bak";
+  title = "Web Developer";
+
   ngOnInit() {
   }
 
