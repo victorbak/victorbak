@@ -10,11 +10,15 @@ import { getLocaleCurrencySymbol, WeekDay } from '@angular/common';
 import { clearOverrides } from '@angular/core/src/view';
 import { BOOL_TYPE } from '@angular/compiler/src/output/output_ast';
 import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/component_factory_resolver';
+import { HeaderComponent } from './shared/header.component';
+import { CoverComponent } from './cover/cover.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    CoverComponent
   ],
   imports: [
     BrowserModule
