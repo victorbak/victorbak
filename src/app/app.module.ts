@@ -13,6 +13,7 @@ import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/compon
 import { HeaderComponent } from './shared/header.component';
 import { CoverComponent } from './cover/cover.component';
 import { AboutComponent } from './about/about.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     HeaderComponent,
     CoverComponent,
-    AboutComponent
+    AboutComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule
