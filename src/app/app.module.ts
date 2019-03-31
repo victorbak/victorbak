@@ -14,6 +14,7 @@ import { HeaderComponent } from './shared/header.component';
 import { CoverComponent } from './cover/cover.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryInfoComponent } from './gallery-info/gallery-info.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     HeaderComponent,
     CoverComponent,
     AboutComponent,
-    GalleryComponent
+    GalleryComponent,
+    GalleryInfoComponent
   ],
   imports: [
     BrowserModule
