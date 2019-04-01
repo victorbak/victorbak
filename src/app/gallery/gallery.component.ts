@@ -12,4 +12,8 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
   }
 
+  onProjectClick(event: any) {
+    alert(event.target.id);
+  }
+
 }
