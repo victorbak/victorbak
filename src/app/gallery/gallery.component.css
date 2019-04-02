@@ -2,19 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: auto;
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
 }
 
 #title {
     /* margin-left: 100px; */
     width: 100%;
+    padding-left: 60px;
 }
 
 #gallery {
     width: 100%;
-    text-align: center; 
+    text-align: center;
+    padding: 80px 60px;
 }
 
 .row {
@@ -24,11 +26,13 @@
 }
 
 .gallery-item {
-    width: 40%;
-    height: 340px;
-    border: 1px solid black;
+    width: 50%;
+    padding-top: 26.25%;
+    position: relative;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all, 2s, ease-in-out, .5s
 }
 
 #item1 {
@@ -57,16 +61,15 @@
 }
 
 .item-text h3 {
+    font-size: 36px;
     transform: translate(0, 45px);
     transition: all, 2s, ease-in-out, .5s;
     color: white;
 }
 
-.item-text:hover h3 {
-    transform: translate(0, 0);
-}
 
 .item-text p {
+    font-size: 30px;
     transform: translate(0, 45px);
     transition: all, 2s, ease-in-out, .5s;
     visibility: hidden;
@@ -74,7 +77,11 @@
     color: white;
 }
 
-.item-text:hover p {
+.gallery-item:hover .item-text h3 {
+    transform: translate(0, 0);
+}
+
+.gallery-item:hover .item-text p {
     transform: translate(0, 0);
     visibility: visible;
     opacity: .5;
@@ -84,22 +91,60 @@
     margin-top: 0;
 }
 
+/* @media only screen and (max-width: 1480px) {
+    .container {
+        max-width: 1000px;
+    }
+} */
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1000px) {
+    .item-text h3 {
+        font-size: 28px;
+    }
+    .item-text p {
+        font-size: 24px;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px) {
     .gallery-item {
-        margin: 20px;
+        width: 400px;
+        padding-left: 0;
+        padding-right: 0;
     }
-    #title {
-        margin: 20px;
+    .item-text h3 {
+        font-size: 24px;
+        transform: translate(0, 0);
     }
-    h1 {
-        text-align: center;
+    .item-text p {
+        font-size: 20px;
+        transform: translate(0, 0);
+        opacity: .5;
+        visibility: visible;
     }
 }
 
 
-@media only screen and (max-width: 400px) {
-    .row {
-        flex-shrink: 1;
+@media only screen and (max-width: 420px) {
+    /* #gallery {
+        padding-left: 0px;
+        padding-right: 0px;
+    } */
+     .gallery-item {
+        width: 350px;
+        height: 175px;
+        margin: 0 10px;
+    } 
+    .item-text h3 {
+        font-size: 18px;
+        transform: translate(0, 0);
+    }
+    .item-text p {
+        font-size: 14px;
+        transform: translate(0, 0);
+        opacity: .5;
+        visibility: visible;
     }
 }
