@@ -27,12 +27,13 @@
 
 .gallery-item {
     width: 50%;
-    padding-top: 26.25%;
+    padding-top: 20.25%;
     position: relative;
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all, 2s, ease-in-out, .5s
+    transition: all, 2s, ease-in-out, .5s;
+    cursor: pointer;
 }
 
 #item1 {
@@ -58,10 +59,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+    pointer-events: none;
 }
 
 .item-text h3 {
     font-size: 36px;
+    margin-bottom: 20px;
     transform: translate(0, 45px);
     transition: all, 2s, ease-in-out, .5s;
     color: white;
@@ -128,10 +131,9 @@
 
 
 @media only screen and (max-width: 420px) {
-    /* #gallery {
-        padding-left: 0px;
-        padding-right: 0px;
-    } */
+    #gallery {
+        padding: 0 0;
+    }
      .gallery-item {
         width: 350px;
         height: 175px;

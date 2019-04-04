@@ -15,7 +15,7 @@ import { CoverComponent } from './cover/cover.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
-
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,11 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     CoverComponent,
     AboutComponent,
     GalleryComponent,
-    ProjectDetailComponent,
+    routingComponents
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
