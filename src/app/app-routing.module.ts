@@ -4,8 +4,9 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 const routes: Routes = [
+    { path: '', redirectTo: '/gallery', pathMatch: 'full' },
     { path: 'gallery', component:GalleryComponent },
-    { path: 'project-details', component: ProjectDetailComponent}
+    { path: 'detail/:id', component: ProjectDetailComponent}
 ];
 
 @NgModule({

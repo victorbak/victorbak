@@ -1,8 +1,8 @@
 export class Project {
-    id: number;
+    id: String;
     title: String;
-    imagePath: String;
     type: String;
     description: String;
-    githubLink: String;
+    github: String;
+    image: String;
 }
