@@ -4,5 +4,6 @@ export class Project {
     type: String;
     description: String;
     github: String;
+    toolset: String;
     image: String;
 }

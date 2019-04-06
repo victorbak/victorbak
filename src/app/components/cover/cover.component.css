@@ -1,9 +1,11 @@
+
+/* for parallaxing image */
 .container::before {
     /* parallaxing image */
     content: "";
     position: absolute;
     width: 100%;
-    background-image: url("../../assets/images/sunset.jpg");
+    background-image: url("../../../assets/images/sunset.jpg");
 
     height: 100%;
 
@@ -15,7 +17,7 @@
 }
 
 .container {
-    height: 100%;
+    background-color: black;
 }
 
 .toppings {

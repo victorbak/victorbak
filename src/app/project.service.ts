@@ -16,7 +16,8 @@ export class ProjectService {
       title: 'Beavertail',
       description: 'A web-app built in Angular, NodeJS, ExpressJs, MongoDB and Bootstrap. A local-news, user aggregate site where mostly unpublished news will be brought to light for the world to see.',
       type: 'Web Development',
-      github: 'https://github.com/NewWestMuseumAR/NWMuseumAR',
+      github: '',
+      toolset: 'Angular, NodeJS, ExpressJS, MongoDB, Bootstrap',
       image: '../assets/images/preview16.jpg'
     },
     {
@@ -25,6 +26,7 @@ export class ProjectService {
       description: 'A mobile app built in Android, displays traffic cameras throughout New Westminster to aid commuters with live camera feeds of incoming and ongoing traffic.',
       type: 'Mobile Development',
       github: '',
+      toolset: 'Java, Android, Google Maps API',
       image: '../assets/images/preview16.jpg'
     },
     {
@@ -33,6 +35,7 @@ export class ProjectService {
       description: `Built with Swift, Rapp is a freestyle rapper's companion app that plays hip-hop instrumentals for users to rap to, and record their verses.`,
       type: 'Mobile Development',
       github: '',
+      toolset: 'Swift',
       image: '../assets/images/preview16.jpg'
     },
     {
@@ -41,6 +44,7 @@ export class ProjectService {
       description: `Built with Angular, you're here right now!`,
       type: 'Web Development',
       github: '',
+      toolset: 'Angular',
       image: '../assets/images/preview16.jpg'
     },
   ]

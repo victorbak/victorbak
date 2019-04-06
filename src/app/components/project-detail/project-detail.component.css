@@ -1,0 +1,30 @@
+.container {
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.images {
+    display: flex;
+    margin: auto;
+}
+
+.img-box {
+    max-width: 540px;
+    min-width: 340px;
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+}
+

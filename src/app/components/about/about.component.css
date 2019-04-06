@@ -3,11 +3,10 @@
     flex-direction: column;
     align-items: flex-start; 
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../assets/images/emile-perron-190221-unsplash.jpg");
+    background-image: url("../../../assets/images/emile-perron-190221-unsplash.jpg");
     background-position: top-left;
     background-size: cover;
+    height: 90%;    
 }
     
 

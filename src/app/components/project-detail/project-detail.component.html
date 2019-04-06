@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card">
+        <button (click)="goBack()">go back</button>
+        <div class="project-info">
+            <h1>{{project.title}}</h1>
+            <h2>{{project.type}}</h2>
+            <div class="images">
+                <div class="img-box">
+                    <img src={{project.image}}>
+                </div>
+                <div class="img-box">
+                    <img src={{project.image}}>
+                </div>
+                <div class="img-box">
+                    <img src={{project.image}}>
+                </div>
+            </div>
+            <p>{{project.description}}</p>
+            <p>Toolset: {{project.toolset}}</p>
+        </div>
+    </div>
+</div>
+
+
