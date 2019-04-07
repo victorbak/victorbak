@@ -1,11 +1,39 @@
 .container {
     box-sizing: border-box;
     padding: 60px;
+    position: relative;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid;
 }
+
+.title {
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    filter: blur(4px);
+} 
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
     padding: 10px;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(24, 24, 24, 0.9);
+    color: white;
 }
 
 .project-info {
@@ -20,11 +48,29 @@
 
 .img-box {
     max-width: 540px;
-    min-width: 340px;
-    margin: 20px;
+    margin: 10px;
+    opacity: 1;
+
 }
 
 img {
     width: 100%;
+    border-radius: 5px;
 }
 
+@media only screen and (max-width: 1010px) {
+    .images {
+        flex-direction: column;
+        align-content: center;
+    }
+    .img-box {
+        width: 400px;
+        min-width: 160px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .title {
+        text-align: center;
+    }
+}

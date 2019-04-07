@@ -42,9 +42,21 @@
     top: 50px;
 }
 
+p {
+    font-size: 44px;
+    padding: 0;
+    margin: 5px;
+}
+
 h1 {
     padding: 0;
     margin: 5px;
     color: black;
 }
 
+
+@media only screen and (max-width: 328px) {
+    p {
+        font-size: 36px;
+    }
+}

@@ -14,12 +14,6 @@ html, body {
     height: 100%;
 }
 
-#title {
-    /* margin-left: 100px; */
-    width: 100%;
-    padding-left: 60px;
-}
-
 h1 {
     font-size: 44px;
 }

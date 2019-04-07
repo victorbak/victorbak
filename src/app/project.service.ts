@@ -18,7 +18,8 @@ export class ProjectService {
       type: 'Web Development',
       github: '',
       toolset: 'Angular, NodeJS, ExpressJS, MongoDB, Bootstrap',
-      image: '../assets/images/preview16.jpg'
+      coverImage: '../assets/images/preview16.jpg',
+      images: ['../../../assets/images/Beaver1.png', '']
     },
     {
       id: '2',
@@ -27,7 +28,8 @@ export class ProjectService {
       type: 'Mobile Development',
       github: '',
       toolset: 'Java, Android, Google Maps API',
-      image: '../assets/images/preview16.jpg'
+      coverImage: '../assets/images/preview16.jpg',
+      images: ['', '']
     },
     {
       id: '3',
@@ -36,7 +38,8 @@ export class ProjectService {
       type: 'Mobile Development',
       github: '',
       toolset: 'Swift',
-      image: '../assets/images/preview16.jpg'
+      coverImage: '../assets/images/preview16.jpg',
+      images: ['', '']
     },
     {
       id: '4',
@@ -45,7 +48,8 @@ export class ProjectService {
       type: 'Web Development',
       github: '',
       toolset: 'Angular',
-      image: '../assets/images/preview16.jpg'
+      coverImage: '../assets/images/preview16.jpg',
+      images: ['', '']
     },
   ]
 

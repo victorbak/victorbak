@@ -1,18 +1,21 @@
 <div class="container">
+    <img id="bg" src="../../../assets/images/Beaver1.png" />
     <div class="card">
         <button (click)="goBack()">go back</button>
         <div class="project-info">
-            <h1>{{project.title}}</h1>
-            <h2>{{project.type}}</h2>
+            <div class="title">
+                <h1>{{project.title}}</h1>
+                <h2>{{project.type}}</h2>
+            </div>
             <div class="images">
                 <div class="img-box">
-                    <img src={{project.image}}>
+                    <img src={{project.coverImage}}>
                 </div>
                 <div class="img-box">
-                    <img src={{project.image}}>
+                    <img src={{project.coverImage}}>
                 </div>
                 <div class="img-box">
-                    <img src={{project.image}}>
+                    <img src={{project.coverImage}}>
                 </div>
             </div>
             <p>{{project.description}}</p>

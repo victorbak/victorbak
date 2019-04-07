@@ -1,18 +1,31 @@
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    /* align-items: center; */
     margin: auto;
     border: 1px solid red;
-    max-width: 1700px;
+    max-width: 1600px;
     overflow: hidden;
+}
+
+#title {
+    /* margin-left: 100px; */
+    width: 100%;
+    padding-left: 60px;
+}
+
+.bg {
+    width: 1000px;
+    background-color: blue;
+    height: 1000px;
 }
 
 
 #gallery {
     width: 100%;
     text-align: center;
-    padding: 0 60px 60px 60px;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 20px;
 }
 
 .row {
@@ -144,5 +157,8 @@
         transform: translate(0, 0);
         opacity: .5;
         visibility: visible;
+    }
+    .container {
+        height: 80%;
     }
 }

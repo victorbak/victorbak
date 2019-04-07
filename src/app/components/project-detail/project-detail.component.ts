@@ -23,11 +23,13 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   project : Project
+  img: String
 
   getProject(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.projectService.getProject(id)
     .subscribe(project => this.project = project);
+    this.img = this.project.coverImage;
   }
 
   goBack(): void {
