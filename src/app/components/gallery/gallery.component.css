@@ -76,7 +76,7 @@
     font-size: 36px;
     margin-bottom: 20px;
     transform: translate(0, 45px);
-    transition: all, 2s, ease-in-out, .5s;
+    transition: all, .3s, ease-in-out, .4s;
     color: white;
 }
 
@@ -84,7 +84,7 @@
 .item-text p {
     font-size: 30px;
     transform: translate(0, 45px);
-    transition: all, 2s, ease-in-out, .5s;
+    transition: all, .3s, ease-in-out, .4s;
     visibility: hidden;
     opacity: 0;
     color: white;

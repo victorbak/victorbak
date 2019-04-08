@@ -19,12 +19,12 @@
 } 
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    /* border-radius: 5px; */
     padding: 10px;
     position: relative;
     z-index: 2;
-    background-color: rgba(24, 24, 24, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
@@ -36,21 +36,16 @@
     padding: 10px;
 }
 
+
 .title h1 {
     margin: 0;
 }
 
-.title button {
-    border-radius: 5px;
-    background-color: red; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+.title .back {
+    visibility: hidden;
+}
+
+.back {
     cursor: pointer;
 }
 
@@ -78,15 +73,21 @@ img {
 
 .description {
     padding: 15px;
+    width: 100%;
 }
 
-.back {
-    cursor: pointer;
+.description .back {
+    text-align: right;
 }
+
 
 @media only screen and (max-width: 1010px) {
     .title {
+        flex-direction: column-reverse;
         text-align: center;
+    }
+    .title .back {
+        visibility: visible;
     }
     .images {
         flex-direction: column;
@@ -116,5 +117,16 @@ img {
     }
     .title {
         flex-direction: column-reverse;
+    }
+    .title h1 {
+        font-size: 30px; 
+    }
+    .title .back {
+        text-align: left;
+        visibility: visible;
+    }
+    .description .back {
+        text-align: center;
+        padding-top: 10px;
     }
 }
