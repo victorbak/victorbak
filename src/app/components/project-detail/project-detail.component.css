@@ -80,7 +80,7 @@ img {
     padding: 15px;
 }
 
-#back {
+.back {
     cursor: pointer;
 }
 
@@ -113,5 +113,8 @@ img {
     }
     .card {
         margin: 0;
+    }
+    .title {
+        flex-direction: column-reverse;
     }
 }

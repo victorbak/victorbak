@@ -4,7 +4,7 @@
         <div class="project-info">
             <div class="title">
                 <h1>{{project.title}}</h1>
-                <button>Back to Projects</button>
+                <p class="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>
             <div class="images">
                 <div class="img-box">
@@ -20,7 +20,6 @@
             <div class="description">
                 <p>{{project.description}}</p>
                 <p>Toolset: {{project.toolset}}</p>
-                <p id="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>
         </div>
     </div>
