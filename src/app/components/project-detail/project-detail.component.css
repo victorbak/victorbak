@@ -1,20 +1,12 @@
 .container {
     box-sizing: border-box;
-    padding: 60px;
+    padding: 20px;
     position: relative;
-    height: 90%;
+    min-height: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border: 1px solid;
-}
-
-.title {
-    width: 100%;
-}
-
-h1 {
-    margin-bottom: 0;
 }
 
 #bg {
@@ -32,8 +24,34 @@ h1 {
     padding: 10px;
     position: relative;
     z-index: 2;
-    background-color: rgba(24, 24, 24, 0.9);
+    background-color: rgba(24, 24, 24, 0.8);
     color: white;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title button {
+    border-radius: 5px;
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .project-info {
@@ -58,7 +76,18 @@ img {
     border-radius: 5px;
 }
 
+.description {
+    padding: 15px;
+}
+
+#back {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1010px) {
+    .title {
+        text-align: center;
+    }
     .images {
         flex-direction: column;
         align-content: center;
@@ -69,8 +98,20 @@ img {
     }
 }
 
-@media only screen and (max-width: 992px) {
-    .title {
-        text-align: center;
+@media only screen and (max-width: 500px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+    .project-info p {
+        font-size: 16px;
+    }
+    .img-box {
+        margin: 0;
+        max-width: 250px;
+        padding: 10px;
+    }
+    .card {
+        margin: 0;
     }
 }

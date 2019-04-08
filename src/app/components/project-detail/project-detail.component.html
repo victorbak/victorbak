@@ -1,11 +1,10 @@
 <div class="container">
     <img id="bg" src="../../../assets/images/Beaver1.png" />
-    <div class="card">
-        <button (click)="goBack()">go back</button>
+    <div class="card"> 
         <div class="project-info">
             <div class="title">
                 <h1>{{project.title}}</h1>
-                <h2>{{project.type}}</h2>
+                <button>Back to Projects</button>
             </div>
             <div class="images">
                 <div class="img-box">
@@ -18,8 +17,11 @@
                     <img src={{project.coverImage}}>
                 </div>
             </div>
-            <p>{{project.description}}</p>
-            <p>Toolset: {{project.toolset}}</p>
+            <div class="description">
+                <p>{{project.description}}</p>
+                <p>Toolset: {{project.toolset}}</p>
+                <p id="back" (click)="goBack()">&larr; Back to projects</p> 
+            </div>
         </div>
     </div>
 </div>

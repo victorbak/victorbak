@@ -1,16 +1,16 @@
-  <div id="title">
-    <h1>Projects</h1>
-  </div>
-  <div class="container">
-    <div id="gallery">
-      <div class="row">
-        <div  *ngFor="let project of projects" (click)="onSelect(project)"
-        routerLink="/detail/{{project.id}}" id="item1" class="gallery-item">
-          <div class="item-text">
-            <h3>{{ project.title }}</h3> 
-            <p>{{ project.type }}</p>
-          </div>
+<div id="title">
+  <h1>Projects</h1>
+</div>
+<div class="container">
+  <div id="gallery">
+    <div class="row">
+      <div  *ngFor="let project of projects" (click)="onSelect(project)"
+      routerLink="/detail/{{project.id}}" id="item1" class="gallery-item">
+        <div class="item-text">
+          <h3>{{ project.title }}</h3> 
+          <p>{{ project.type }}</p>
         </div>
       </div>
+    </div>
   </div>
 </div>
