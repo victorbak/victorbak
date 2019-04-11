@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { FirebaseService } from '../../firebase.service';
 
 import { Message } from '../../message';
 
@@ -12,9 +13,16 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    public firebaseService: FirebaseService
+    ) { }
 
   ngOnInit() {
+    this.createForm();
+  }
+
+  createForm() {
     this.contactForm = this.fb.group({
       name: ['', [
         Validators.required,
@@ -48,7 +56,25 @@ export class ContactComponent implements OnInit {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+
+  resetFields(){
+    this.contactForm = this.fb.group({
+      name: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      message: new FormControl('', Validators.required),
+    });
+  }
+
+  onSubmit(value){
+    alert(value.name);
+    this.firebaseService.addMessage(value)
+    .then(
+      res => {
+        this.resetFields();
+      }
+    )
+  }
+  
 
     // TODO: Remove this when we're done
     get diagnostic() { return JSON.stringify(this.model); }

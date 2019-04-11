@@ -2,10 +2,10 @@
   <!-- <img class="bg" src="../../../assets/images/sunset.jpg"> -->
   <div class="content">
         <h1>Contact</h1>
-        <form [formGroup]="contactForm">
+        <form [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit(contactForm.value)"> 
           Value: {{ contactForm.value | json}}
           <hr>
-    
+
           <mat-form-field>
             <input matInput placeholder="name" formControlName="name">
             <mat-error *ngIf="name.touched && name.pristine">
@@ -28,7 +28,9 @@
               </mat-error>
           </mat-form-field>
 
-          <button mat-raised-button color="primary">I am a button</button>
+          <div class="row submit-button-container">
+            <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!contactForm.valid">Create</button>
+          </div>
         </form> 
   </div>
 </div>
