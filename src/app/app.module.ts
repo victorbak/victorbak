@@ -10,7 +10,15 @@ import { getLocaleCurrencySymbol, WeekDay } from '@angular/common';
 import { clearOverrides } from '@angular/core/src/view';
 import { BOOL_TYPE } from '@angular/compiler/src/output/output_ast';
 import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/component_factory_resolver';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+
 
 import { HeaderComponent } from './components/shared/header.component';
 import { CoverComponent } from './components/cover/cover.component';
@@ -33,7 +41,13 @@ import { ContactComponent } from './components/contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

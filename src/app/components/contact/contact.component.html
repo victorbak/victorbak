@@ -1,46 +1,34 @@
 <div class="container">
-  <img class="bg" src="../../../assets/images/sunset.jpg">
+  <!-- <img class="bg" src="../../../assets/images/sunset.jpg"> -->
   <div class="content">
         <h1>Contact</h1>
-        <form>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name"
-                    required
-                    [(ngModel)]="model.name" name="name"
-                    #name="ngModel">
-            <div [hidden]="name.valid || name.pristine"
-                 class="alert alert-danger">
-              Name is required
-            </div>
-          </div>
-      
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="email"
-                    required
-                    [(ngModel)]="model.email" name="email"
-                    #email="ngModel">
-            <div [hidden]="email.valid || email.pristine"
-                 class="alert alert-danger">
-              Email is required
-            </div>
-          </div>
+        <form [formGroup]="contactForm">
+          Value: {{ contactForm.value | json}}
+          <hr>
+    
+          <mat-form-field>
+            <input matInput placeholder="name" formControlName="name">
+            <mat-error *ngIf="name.touched && name.pristine">
+                No name entered.
+            </mat-error>    
+          </mat-form-field>
 
-          <div class="form-group">
-              <label for="message">Message</label>
-              <input type="text" class="form-control" id="message"
-                      required
-                      [(ngModel)]="model.message" name="message"
-                      #message="ngModel">
-              <div [hidden]="message.valid || message.pristine"
-                  class="alert alert-danger">
-                Message is required
-              </div>
-            </div>
-      
-          <button type="submit" class="btn btn-success">Submit</button>
-      
-        </form>
+          <mat-form-field>
+              <input matInput placeholder="email" formControlName="email">
+              <mat-error *ngIf="email.invalid && email.touched" >
+                  Invalid email
+              </mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field>
+              <textarea matInput placeholder="message" formControlName="message">hi</textarea>
+              <mat-error *ngIf="message.touched && message.pristine">
+                  Don't forget to add your message!
+              </mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary">I am a button</button>
+        </form> 
   </div>
 </div>
