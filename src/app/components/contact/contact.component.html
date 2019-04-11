@@ -1,36 +1,38 @@
 <div class="container">
-  <!-- <img class="bg" src="../../../assets/images/sunset.jpg"> -->
+  <img class="bg" src=gigit"../../../assets/images/sunset.jpg">
   <div class="content">
-        <h1>Contact</h1>
-        <form [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit(contactForm.value)"> 
-          Value: {{ contactForm.value | json}}
-          <hr>
+    <mat-card class="form-card">
+      <form class="contact-form" [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit(contactForm.value)"> 
 
-          <mat-form-field>
-            <input matInput placeholder="name" formControlName="name">
-            <mat-error *ngIf="name.touched && name.pristine">
-                No name entered.
-            </mat-error>    
-          </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+          <mat-error *ngIf="name.touched && name.pristine">
+              No name entered.
+          </mat-error>    
+        </mat-form-field>
 
-          <mat-form-field>
-              <input matInput placeholder="email" formControlName="email">
-              <mat-error *ngIf="email.invalid && email.touched" >
-                  Invalid email
-              </mat-error>
-          </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+            <mat-error *ngIf="email.invalid && email.touched" >
+                Invalid email
+            </mat-error>
+        </mat-form-field>
 
+        <mat-form-field appearance="outline">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message">hi</textarea>
+            <mat-error *ngIf="message.touched && message.pristine">
+                Don't forget to add your message!
+            </mat-error>
+        </mat-form-field>
 
-          <mat-form-field>
-              <textarea matInput placeholder="message" formControlName="message">hi</textarea>
-              <mat-error *ngIf="message.touched && message.pristine">
-                  Don't forget to add your message!
-              </mat-error>
-          </mat-form-field>
+        <div class="row submit-button-container">
+          <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!contactForm.valid">Create</button>
+        </div>
 
-          <div class="row submit-button-container">
-            <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!contactForm.valid">Create</button>
-          </div>
-        </form> 
+      </form>
+    </mat-card>
   </div>
 </div>

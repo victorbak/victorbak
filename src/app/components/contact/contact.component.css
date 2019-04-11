@@ -7,8 +7,21 @@
 }
 
 .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 2;
+}
+
+.form-card {
+    width: 60%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
 }
 
 
