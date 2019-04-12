@@ -52,11 +52,6 @@ export class ContactComponent implements OnInit {
   }
 
 
-  model = new Message(18, 'voctor','test@test.com', 'Hello There!');
-
-  submitted = false;
-
-
   resetFields(){
     this.contactForm = this.fb.group({
       name: new FormControl('', Validators.required),
@@ -74,9 +69,6 @@ export class ContactComponent implements OnInit {
       }
     )
   }
-  
 
-    // TODO: Remove this when we're done
-    get diagnostic() { return JSON.stringify(this.model); }
 
 }

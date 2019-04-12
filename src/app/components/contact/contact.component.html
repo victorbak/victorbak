@@ -1,10 +1,10 @@
 <div class="container">
-  <img class="bg" src=gigit"../../../assets/images/sunset.jpg">
+  <img class="bg" src="../../../assets/images/sunset.jpg">
   <div class="content">
     <mat-card class="form-card">
       <form class="contact-form" [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit(contactForm.value)"> 
 
-        <mat-form-field appearance="outline">
+        <mat-form-field class="field">
           <mat-label>Name</mat-label>
           <input matInput formControlName="name">
           <mat-error *ngIf="name.touched && name.pristine">
@@ -12,7 +12,7 @@
           </mat-error>    
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field class="field">
           <mat-label>Email</mat-label>
             <input matInput formControlName="email">
             <mat-error *ngIf="email.invalid && email.touched" >
@@ -20,7 +20,7 @@
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field class="field">
             <mat-label>Message</mat-label>
             <textarea matInput formControlName="message">hi</textarea>
             <mat-error *ngIf="message.touched && message.pristine">
@@ -29,7 +29,7 @@
         </mat-form-field>
 
         <div class="row submit-button-container">
-          <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!contactForm.valid">Create</button>
+          <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!contactForm.valid">Send Message</button>
         </div>
 
       </form>

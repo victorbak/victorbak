@@ -3,15 +3,17 @@
     flex-direction: column;
     align-items: flex-start; 
     justify-content: center;
-    background-image: url("../../../assets/images/emile-perron-190221-unsplash.jpg");
+    background-image: url("../../../assets/images/cpu_dark4.png");
     background-position: top-left;
     background-size: cover;
     background-position: center;
     height: auto;
     width: 100%;
+    position: relative;
     overflow: hidden;
 }
     
+
 
 .card {
     width: 600px;
@@ -20,6 +22,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.2s;
     background-color: rgba(0,0,0,0.7);
+    position: relative;
 }
 
 .text {

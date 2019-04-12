@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="description">
-                <p>{{project.description}}</p>
+                <p [innerHTML]="project.description"></p>
                 <p>Toolset: {{project.toolset}}</p>
                 <p class="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>

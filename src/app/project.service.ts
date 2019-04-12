@@ -14,7 +14,8 @@ export class ProjectService {
     {
       id: '1',
       title: 'Beavertail',
-      description: 'A web-app built in Angular, NodeJS, ExpressJs, MongoDB and Bootstrap. A local-news, user aggregate site where mostly unpublished news will be brought to light for the world to see.',
+      description: 'This web-app was built with three other peers. I had a lot of fun working on this one, because I got to primarily develop the backend. I also got to assist with some front-end and ' 
+      + 'made services for data to be displayed on the front-end. <p> Beavertail is a social app for users who want to share their local news to the world, shedding light on stories that would otherwise be unheard of in a global scale.</p>',
       type: 'Web Development',
       github: '',
       toolset: 'Angular, NodeJS, ExpressJS, MongoDB, Bootstrap',
