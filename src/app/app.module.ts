@@ -23,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
 
 import { HeaderComponent } from './components/shared/header.component';
@@ -55,7 +56,8 @@ import { ContactComponent } from './components/contact/contact.component';
     MatChipsModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
     
   ],
   providers: [],

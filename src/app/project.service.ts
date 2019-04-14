@@ -19,8 +19,8 @@ export class ProjectService {
       type: 'Web Development',
       github: '',
       toolset: 'Angular, NodeJS, ExpressJS, MongoDB, Bootstrap',
-      coverImage: '../assets/images/preview16.jpg',
-      images: ['../../../assets/images/Beaver1.png', '']
+      coverImage: '../../../assets/images/B1.png',
+      images: ['../../../assets/images/B2.png', '../../../assets/images/B3.png', '../../../assets/images/B4.png']
     },
     {
       id: '2',

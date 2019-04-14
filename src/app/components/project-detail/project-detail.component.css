@@ -31,10 +31,6 @@
     margin: 0;
 }
 
-.title .back {
-    /* visibility: hidden; */
-}
-
 .back {
     cursor: pointer;
 }
@@ -50,10 +46,9 @@
 }
 
 .img-box {
-    max-width: 540px;
+    max-width: 440px;
     margin: 10px;
     opacity: 1;
-
 }
 
 .img-box img {
@@ -67,7 +62,7 @@
 }
 
 .description .back {
-    visibility: hidden;
+    display: none;
     text-align: right;
 }
 
@@ -114,10 +109,10 @@
     }
     .title .back {
         text-align: left;
-        visibility: visible;
     }
     .description .back {
         text-align: center;
         padding-top: 10px;
+        display: revert;
     }
 }

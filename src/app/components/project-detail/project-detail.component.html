@@ -1,5 +1,6 @@
 <div class="container">
     <img class="bg" src="../../../assets/images/Beaver1.png" />
+    <div class="overlay"></div>
     <div class="card"> 
         <div class="project-info">
             <div class="title">
@@ -7,19 +8,19 @@
                 <p class="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>
             <div class="images">
-                <div class="img-box">
+                <div class="img-box" *ngFor="let image of project.images">
+                    <img src={{image}}>
+                </div>
+                <!-- <div class="img-box">
                     <img src={{project.coverImage}}>
                 </div>
                 <div class="img-box">
                     <img src={{project.coverImage}}>
-                </div>
-                <div class="img-box">
-                    <img src={{project.coverImage}}>
-                </div>
+                </div> -->
             </div>
             <div class="description">
                 <p [innerHTML]="project.description"></p>
-                <p>Toolset: {{project.toolset}}</p>
+                <p>Built with: {{project.toolset}}</p>
                 <p class="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>
         </div>
