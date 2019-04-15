@@ -19,7 +19,7 @@ export class ProjectService {
       type: 'Web Development',
       github: '',
       toolset: 'Angular, NodeJS, ExpressJS, MongoDB, Bootstrap',
-      coverImage: '../../../assets/images/B1.png',
+      coverImage: '../../../assets/images/bt2c.png',
       images: ['../../../assets/images/B2.png', '../../../assets/images/B3.png', '../../../assets/images/B4.png']
     },
     {
@@ -30,7 +30,7 @@ export class ProjectService {
       github: '',
       toolset: 'Java, Android, Google Maps API',
       coverImage: '../assets/images/preview16.jpg',
-      images: ['', '']
+      images: ['../assets/images/preview16.jpg', '../assets/images/preview16.jpg', '../assets/images/preview16.jpg']
     },
     {
       id: '3',
@@ -49,7 +49,7 @@ export class ProjectService {
       type: 'Web Development',
       github: '',
       toolset: 'Angular',
-      coverImage: '../assets/images/preview16.jpg',
+      coverImage: '../assets/images/v0.png',
       images: ['', '']
     },
   ]

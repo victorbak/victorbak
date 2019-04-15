@@ -61,7 +61,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(value){
-    alert(value.name);
+    alert(value.name);  
     this.firebaseService.addMessage(value)
     .then(
       res => {
