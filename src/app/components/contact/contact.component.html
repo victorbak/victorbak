@@ -1,7 +1,16 @@
 <div class="container">
-  <img class="bg" src="../../../assets/images/sunset.jpg">
+  <div class="overlay"></div>
   <div class="content">
+      <div class="text">
+          <p id="title">Away From Desk.</p>
+          <p class="sub">If you like what you see and want to get in touch, don't hesitate to reach out!</p>
+          <p class="sub">I'm always open to new projects and opportunities. Always looking forward to meeting new people.</p>
+      </div>
     <mat-card class="form-card">
+      <mat-card-header>
+          <!-- <mat-card-title id="card-title">Drop A Message</mat-card-title> -->
+          <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        </mat-card-header>
       <form class="contact-form" [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit(contactForm.value)"> 
 
         <mat-form-field class="field">
@@ -22,7 +31,11 @@
 
         <mat-form-field class="field">
             <mat-label>Message</mat-label>
-            <textarea matInput formControlName="message">hi</textarea>
+            <textarea matInput formControlName="message"
+                                cdkTextareaAutosize
+                                #autosize="cdkTextareaAutosize"
+                                cdkAutosizeMinRows="3"
+                                cdkAutosizeMaxRows="7">hi</textarea>
             <mat-error *ngIf="message.touched && message.pristine">
                 Don't forget to add your message!
             </mat-error>

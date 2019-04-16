@@ -14,8 +14,8 @@ export class ProjectService {
     {
       id: '1',
       title: 'Beavertail',
-      description: 'This web-app was built with three other peers. I had a lot of fun working on this one, because I got to primarily develop the backend. I also got to assist with some front-end and ' 
-      + 'made services for data to be displayed on the front-end. <p> Beavertail is a social app for users who want to share their local news to the world, shedding light on stories that would otherwise be unheard of in a global scale.</p>',
+      description: 'Beavertail is a social app for users who want to share their local news to the world, shedding light on stories that would otherwise be unheard of in a global scale. <p>This web-app was built with three other peers. I had a lot of fun working on this one, because I got to primarily develop the backend. I also got to assist with some front-end and ' 
+      + 'made services for data to be displayed on the front-end.</p> ',
       type: 'Web Development',
       github: '',
       toolset: 'Angular, NodeJS, ExpressJS, MongoDB, Bootstrap',
@@ -24,23 +24,24 @@ export class ProjectService {
     },
     {
       id: '2',
-      title: 'New West Traffic Tracker',
-      description: 'A mobile app built in Android, displays traffic cameras throughout New Westminster to aid commuters with live camera feeds of incoming and ongoing traffic.',
-      type: 'Mobile Development',
-      github: '',
-      toolset: 'Java, Android, Google Maps API',
-      coverImage: '../assets/images/preview16.jpg',
-      images: ['../assets/images/preview16.jpg', '../assets/images/preview16.jpg', '../assets/images/preview16.jpg']
-    },
-    {
-      id: '3',
       title: 'Rapp',
       description: `Built with Swift, Rapp is a freestyle rapper's companion app that plays hip-hop instrumentals for users to rap to, and record their verses.`,
       type: 'Mobile Development',
       github: '',
       toolset: 'Swift',
-      coverImage: '../assets/images/preview16.jpg',
+      coverImage: '../assets/images/rapp2.png',
       images: ['', '']
+    },
+    {
+      id: '3',
+      title: 'Budge',
+      description: 'Budge is a handy web-app to manage personal finances and budgets. It helps users keep track of their expenses, bills and current cash. <p>' 
+      + 'This one is a personal project of mine. I made it for initially for myself to use, but I\'m sure there are many people who could use it as well.',
+      type: 'Web Development',
+      github: '',
+      toolset: 'Laravel, PHP, MySQL, Bootstrap',
+      coverImage: '../assets/images/budge.png',
+      images: ['../assets/images/preview16.jpg', '../assets/images/preview16.jpg', '../assets/images/preview16.jpg']
     },
     {
       id: '4',

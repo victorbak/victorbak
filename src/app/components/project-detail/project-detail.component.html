@@ -1,5 +1,6 @@
-<div class="container">
-    <img class="bg" src="../../../assets/images/Beaver1.png" />
+<div class="container"
+     [ngStyle]="{'background-image': 'url(' + project.coverImage + ')'}"
+     id="project{{project.id}}">
     <div class="overlay"></div>
     <div class="card"> 
         <div class="project-info">
@@ -8,15 +9,11 @@
                 <p class="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>
             <div class="images">
-                <div class="img-box" *ngFor="let image of project.images">
-                    <img src={{image}}>
+                <div *ngFor="let image of project.images; let i = index;"
+                     class="img-box" 
+                     id="item{{i+1}}"
+                     [ngStyle]="{'background-image': 'url(' + image + ')'}">
                 </div>
-                <!-- <div class="img-box">
-                    <img src={{project.coverImage}}>
-                </div>
-                <div class="img-box">
-                    <img src={{project.coverImage}}>
-                </div> -->
             </div>
             <div class="description">
                 <p [innerHTML]="project.description"></p>
