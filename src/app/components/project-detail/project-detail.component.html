@@ -5,14 +5,15 @@
     <div class="card"> 
         <div class="project-info">
             <div class="title">
-                <h1>{{project.title}}</h1>
+                <p class="title-text">{{project.title}}</p>
                 <p class="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>
             <div class="images">
                 <div *ngFor="let image of project.images; let i = index;"
-                     class="img-box" 
-                     id="item{{i+1}}"
-                     [ngStyle]="{'background-image': 'url(' + image + ')'}">
+                    class="img-box" 
+                    id="item{{i+1}}"
+                    [ngStyle]="{'background-image': 'url(' + image + ')'}"
+                    (click)="view(i)">
                 </div>
             </div>
             <div class="description">
@@ -21,6 +22,12 @@
                 <p>Built with: {{project.toolset}}</p>
                 <p class="back" (click)="goBack()">&larr; Back to projects</p> 
             </div>
+        </div>
+    </div>
+    <div id="image-overlay" (click)="view()">
+        <div id="ok">
+            <img id="zoomed-image" src="" >
+            <p id="next" (click)="next($event)">Next &rarr;</p>
         </div>
     </div>
 </div>

@@ -6,5 +6,5 @@ export class Project {
     github: String;
     toolset: String;
     coverImage: String;
-    images: String[];
+    images: string[];
 }

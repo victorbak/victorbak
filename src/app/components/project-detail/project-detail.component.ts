@@ -20,6 +20,10 @@ export class ProjectDetailComponent implements OnInit {
 
   private fragment: string;
   private checked: boolean = false;
+  private isOverlayOn: boolean = false;
+  private body;
+  private overlay;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +36,8 @@ export class ProjectDetailComponent implements OnInit {
   ngOnInit() {
     this.getProject();
     this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+    this.overlay = document.getElementById('image-overlay');
+    this.body = document.getElementById('body')
   }
 
   //scrolls to to element with id stored in fragment string (overlay)
@@ -61,4 +67,24 @@ export class ProjectDetailComponent implements OnInit {
     this.location.back();
   }
 
+  view(index?: number): void {
+    let img;
+    if (!this.isOverlayOn) {
+      this.overlay.style.display = 'block'
+      img = document.getElementById('zoomed-image');
+      img.src = this.project.images[index];
+      this.body.style.overflow = 'hidden';
+      this.isOverlayOn = true;
+    }
+    else {
+      this.overlay.style.display = "none"
+      this.body.style.overflow = 'visible';
+      this.isOverlayOn = false;
+    }
+  }
+
+  next(e) {
+    e = window.event;
+    e.cencelBubble = true;
+  }
 }

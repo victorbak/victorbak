@@ -61,7 +61,7 @@
 
 @media only screen and (max-width: 1400px) {
     .text {
-        margin: 50px;
+        margin: 25px 50px 50px 50px;
     }
     .form-card {
         margin: 20px;
