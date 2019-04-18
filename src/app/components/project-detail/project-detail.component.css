@@ -122,18 +122,15 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
-
-}
 
 @media only screen and (max-width: 400px) {
     .project-info p {
         font-size: 16px;
     }
     .img-box {
-        width: 350px;
+        width: 90vw;
         height: 175px;
-        margin: 0 10px;
+        margin: 5px 10px;
     }
     .card {
         margin: 0;
@@ -146,6 +143,9 @@
     }
     .title .back {
         text-align: left;
+    }
+    .description {
+        width: 90vw;
     }
     .description .back {
         text-align: center;

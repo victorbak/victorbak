@@ -1,4 +1,4 @@
-<div class="projects">
+<div class="projects" id="top">
   <h1 id="title">Projects</h1>
   <div class="container">
     <div id="gallery">
@@ -6,6 +6,7 @@
         <div *ngFor="let project of projects; let i = index"
              [ngStyle]="{'background-image': 'url(' + project.coverImage + ')'}"
              routerLink="/detail/{{project.id}}"
+             fragment="details"
              id="item{{i+1}}"
              class="gallery-item">
           <div class="item-text">

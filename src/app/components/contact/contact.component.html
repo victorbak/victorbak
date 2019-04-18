@@ -15,7 +15,8 @@
 
         <mat-form-field class="field">
           <mat-label>Name</mat-label>
-          <input matInput formControlName="name">
+          <input matInput formControlName="name"
+                          placeholder="Name">
           <mat-error *ngIf="name.touched && name.pristine">
               No name entered.
           </mat-error>    
@@ -23,7 +24,8 @@
 
         <mat-form-field class="field">
           <mat-label>Email</mat-label>
-            <input matInput formControlName="email">
+            <input matInput formControlName="email"
+                            placeholder="Email">
             <mat-error *ngIf="email.invalid && email.touched" >
                 Invalid email
             </mat-error>
@@ -32,10 +34,11 @@
         <mat-form-field class="field">
             <mat-label>Message</mat-label>
             <textarea matInput formControlName="message"
+                                placeholder="Type a message"
                                 cdkTextareaAutosize
                                 #autosize="cdkTextareaAutosize"
-                                cdkAutosizeMinRows="3"
-                                cdkAutosizeMaxRows="7">hi</textarea>
+                                cdkAutosizeMinRows="5"
+                                cdkAutosizeMaxRows="10">hi</textarea>
             <mat-error *ngIf="message.touched && message.pristine">
                 Don't forget to add your message!
             </mat-error>

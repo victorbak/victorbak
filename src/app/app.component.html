@@ -5,7 +5,10 @@
 <!-- <div id="project-title">
   <h1>Projects</h1>
 </div> -->
-<router-outlet></router-outlet>
+<!-- <div [@routeAnimations]="prepareRoute(outlet)"> /////TEMPORARILY COMMENTING OUT -->
+<div>
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <app-contact></app-contact>
 <!-- <div style="text-align:center; position:relative; top:75px;">
   <h1>

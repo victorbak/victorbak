@@ -1,11 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { Project } from '../../project';
 import { ProjectService } from '../../project.service';
+import { galleryAnimation } from '../../animations';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  styleUrls: ['./gallery.component.css'],
+  animations: [
+    galleryAnimation
+  ]
 })
 export class GalleryComponent implements OnInit {
 
@@ -14,7 +18,9 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
     this.getProjects();
   }
+  
 
+  @HostBinding('@pageAnimations')
   projects: Project[];
 
   getProjects(): void {
