@@ -13,12 +13,26 @@ import { galleryAnimation } from '../../animations';
 })
 export class GalleryComponent implements OnInit {
 
+  private checked: Boolean = false;
+  private fragment: string;
+
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
     this.getProjects();
   }
   
+  ngAfterViewChecked(): void {
+    if(!this.checked) {
+    try {
+        if(this.fragment) {
+            document.querySelector('#' + this.fragment).scrollIntoView();
+            this.checked = true;
+        }
+    } catch (e) { }
+    return;
+  }
+  }
 
   @HostBinding('@pageAnimations')
   projects: Project[];

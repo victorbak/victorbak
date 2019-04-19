@@ -19,8 +19,10 @@ import { Project } from '../../project';
 export class ProjectDetailComponent implements OnInit {
 
   private fragment: string;
-  private checked: boolean = false;
+  checked: boolean = false;
   private isOverlayOn: boolean = false;
+  private displayImage;
+  private imageIndex;
   private body;
   private overlay;
 
@@ -67,12 +69,15 @@ export class ProjectDetailComponent implements OnInit {
     this.location.back();
   }
 
+
   view(index?: number): void {
-    let img;
+    if(index != null) {
+      this.imageIndex = index;
+    }
     if (!this.isOverlayOn) {
-      this.overlay.style.display = 'block'
-      img = document.getElementById('zoomed-image');
-      img.src = this.project.images[index];
+      this.overlay.style.display = 'block';
+      this.displayImage = document.getElementById('zoomed-image');
+      this.displayImage.src = this.project.images[this.imageIndex];
       this.body.style.overflow = 'hidden';
       this.isOverlayOn = true;
     }
@@ -83,8 +88,30 @@ export class ProjectDetailComponent implements OnInit {
     }
   }
 
-  next(e) {
-    e = window.event;
-    e.cencelBubble = true;
+  next(e : Event) {
+    e.stopPropagation(); 
+    if(this.imageIndex < this.project.images.length - 1) {
+      this.imageIndex++;
+    }
+    else {
+      if (this.imageIndex == this.project.images.length - 1 ) {
+        this.imageIndex = 0;
+      }
+    }
+    this.displayImage.src = this.project.images[this.imageIndex];
   }
+
+  prev(e : Event) {
+    e.stopPropagation();
+    if (this.imageIndex == 0 ) {
+      this.imageIndex = (this.project.images.length - 1);
+      this.displayImage.src = this.project.images[this.imageIndex];
+    } else {
+      if(this.imageIndex <= this.project.images.length - 1) {
+        this.imageIndex--;
+        this.displayImage.src = this.project.images[this.imageIndex];
+      }
+    }
+  }
+
 }

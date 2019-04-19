@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router, NavigationStart} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { slideInAnimation} from './animations';
+import { Subscription } from 'rxjs';
+
+export let browserRefresh = false;
 
 @Component({
   selector: 'app-root',
@@ -12,8 +15,18 @@ import { slideInAnimation} from './animations';
   ]
 })
 export class AppComponent {
+  private route: Router;
+  private subscription: Subscription;
   title = "Victor Bak's Portfolio";
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+
+  // Example in the constructor of you App Component
+  constructor(private router: Router) {
+    this.subscription = router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        browserRefresh = !router.navigated;
+        this.route.navigate(['/']);
+      }
+    });
   }
+  
 }
