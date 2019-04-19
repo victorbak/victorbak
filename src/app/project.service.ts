@@ -24,13 +24,14 @@ export class ProjectService {
     },
     {
       id: '2',
-      title: 'Rapp',
-      description: [`Built with Swift, Rapp is a freestyle rapper's companion app that plays hip-hop instrumentals for users to rap to, and record their verses.`, ''],
+      title: 'New West Traffic Tracker`',
+      description: [`New West Traffic Tracker is an app for commuters who want to see live update camera feeds of New West traffic.`, 'This app was made ' 
+    + 'in collab with the City of New Westminster. It\'s and app that uses data sets provided by New West and DriveBC, which allows for a quick way for drivers to actually see which way would be wisest to take for their commute.'],
       type: 'Mobile Development',
       github: '',
-      toolset: 'Swift',
-      coverImage: '../assets/images/rapp2.png',
-      images: ['', '']
+      toolset: 'Android, Java',
+      coverImage: '../assets/images/nw4.png',
+      images: ['../assets/images/nw2.png', '../assets/images/nw1.png', '../assets/images/nw3.png']
     },
     {
       id: '3',
@@ -46,12 +47,13 @@ export class ProjectService {
     {
       id: '4',
       title: 'victorbak.com',
-      description: [`Built with Angular, you're here right now!`],
+      description: [`You may have realized, that you're already on this site!`, 'This is a project of mine to show off work I\'ve done, and will be doing. It was a lot ' 
+    + 'of fun building this site, as I wanted to code everything from scratch. I\'m proud to call this my portfolio. If you want to comment or criticize, don\'t hesitate to drop a message in the form below! :)'],
       type: 'Web Development',
       github: '',
-      toolset: 'Angular',
+      toolset: 'Angular, Firebase',
       coverImage: '../assets/images/v0.png',
-      images: ['', '']
+      images: ['../assets/images/vb2.png', '../assets/images/vb3.png', '../assets/images/vb4.png']
     },
   ]
 

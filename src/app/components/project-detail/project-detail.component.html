@@ -6,7 +6,7 @@
         <div class="project-info">
             <div class="title">
                 <p class="title-text">{{project.title}}</p>
-                <p class="back" routerLink="/gallery" fragment="title">&larr; Back to projects</p> 
+                <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
             </div>
             <div class="images">
                 <div *ngFor="let image of project.images; let i = index;"
@@ -16,15 +16,23 @@
                     (click)="view(i)">
                 </div>
             </div>
+            <div class="mobile-images">
+                <div *ngFor="let image of project.images; let i = index;"
+                    class="img-box" 
+                    id="item{{i+1}}"
+                    [ngStyle]="{'background-image': 'url(' + image + ')'}">
+                </div>
+            </div>
             <div class="description">
                 <p *ngFor="let paragraph of project.description"
                     class="desc-text">{{paragraph}}</p>
                 <p>Built with: {{project.toolset}}</p>
-                <p class="back" routerLink="/gallery">&larr; Back to projects</p> 
+                <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
             </div>
         </div>
     </div>
     <div id="image-overlay" (click)="view()">
+        <p id="close">&#10005;</p>
         <div id="ok">
             <img id="zoomed-image" src="" (click)="next($event)" >
             <div id="controls">

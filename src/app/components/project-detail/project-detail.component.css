@@ -9,21 +9,10 @@
     background-position: center;
 }
 
-#project1 {
-
-}
 
 #project2 {
     background-position: bottom center;
-}
-
-#project1 {
-    
-}
-
-#project1 {
-    
-}
+} 
 
 .card {
     margin: 20px;
@@ -67,6 +56,13 @@
     width: 100%;
 }
 
+.mobile-images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: none;
+}
+
 .img-box {
     width: 70%;
     padding-top: 20.25%;
@@ -107,10 +103,24 @@
     height: 100%;
 }
 
+#close {
+    z-index: 5;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 81%;
+    top: 3%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .2s ease-in-out;
+    padding: 10px;
+    }
+
+
 #controls {
     display: flex;
     position: relative;
-    top: 80%;
+    top: 77%;
     z-index: 5;
     width: 100%;
     justify-content: center;
@@ -124,6 +134,7 @@
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.4);
     transition: .2s ease-in-out;
+    text-align: center;
 }
 
 /* #prev {
@@ -135,17 +146,13 @@
     transition: .2s ease-in-out;
 } */
 
-#prev:hover {
+#prev:hover,
+#next:hover,
+#close:hover {
     color: rgb(156, 75, 75);
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-
-#next:hover {
-    color: rgb(156, 75, 75);
-    background-color: rgba(0, 0, 0, 0.7);
-    
-}
 #zoomed-image {
     position: absolute;
     width: 70vw;
@@ -183,11 +190,11 @@
         min-width: 160px;
     }
     #zoomed-image {
-        height: 50vh;
+        height: 70vh;
         width: 80vw;
     }
     #controls {
-        top: 63%;
+        top: 73%;
     }
     #prev, #next {
         padding: 5px;
@@ -196,7 +203,7 @@
 
 
 @media only screen and (max-width: 400px) {
-    .project-info p {
+    .description p {
         font-size: 16px;
     }
     .img-box {
@@ -207,8 +214,20 @@
     .card {
         margin: 0;
     }
+    .images {
+        display: none;
+    }
+    .mobile-images {
+        display: block;
+    }
+    .mobile-images .img-box {
+        cursor: default;
+    }
     .title {
         flex-direction: column-reverse;
+    }
+    .title-text {
+        margin: 0;
     }
     .title .back {
         text-align: left;
@@ -221,10 +240,10 @@
         padding-top: 10px;
         display: block;
     }
-    #image-overlay {
+    #zoomed-image {
         display: none;
     }
-    #zoomed-image {
+    #controls {
         display: none;
     }
 }
