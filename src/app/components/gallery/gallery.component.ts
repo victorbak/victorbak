@@ -22,17 +22,17 @@ export class GalleryComponent implements OnInit {
     this.getProjects();
   }
   
-  ngAfterViewChecked(): void {
-    if(!this.checked) {
-    try {
-        if(this.fragment) {
-            document.querySelector('#' + this.fragment).scrollIntoView();
-            this.checked = true;
-        }
-    } catch (e) { }
-    return;
-  }
-  }
+  // ngAfterViewChecked(): void {
+  //   if(!this.checked) {
+  //   try {
+  //       if(this.fragment) {
+  //           document.querySelector('#' + this.fragment).scrollIntoView();
+  //           this.checked = true;
+  //       }
+  //   } catch (e) { }
+  //   return;
+  // }
+  // }
 
   @HostBinding('@pageAnimations')
   projects: Project[];

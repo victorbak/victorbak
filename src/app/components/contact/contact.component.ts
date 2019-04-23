@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { FirebaseService } from '../../firebase.service';
 
 import { Message } from '../../message';
@@ -60,8 +60,8 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  onSubmit(value){
-    alert(value.name);  
+  onSubmit(value, formDirective : NgForm){
+    console.log("value: " + value);  
     this.firebaseService.addMessage(value)
     .then(
       res => {

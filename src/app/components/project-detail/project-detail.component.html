@@ -6,7 +6,7 @@
         <div class="project-info">
             <div class="title">
                 <p class="title-text">{{project.title}}</p>
-                <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
+                <p class="back" routerLink="/gallery">&larr; Back to projects</p> 
             </div>
             <!-- images that display on desktop version -->
             <div class="images">
@@ -30,7 +30,7 @@
                 <p *ngFor="let paragraph of project.description"
                     class="desc-text">{{paragraph}}</p>
                 <p>Built with: {{project.toolset}}</p>
-                <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
+                <p class="back" routerLink="/gallery">&larr; Back to projects</p> 
             </div>
         </div>
     </div>
