@@ -23,7 +23,7 @@ export class ProjectDetailComponent implements OnInit {
   private imageIndex;
   private body;
   private overlay;
-  private mobileIndex;
+  mobileIndex;
 
 
   constructor(
