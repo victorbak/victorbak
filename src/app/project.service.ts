@@ -24,7 +24,7 @@ export class ProjectService {
     },
     {
       id: '2',
-      title: 'New West Traffic Tracker`',
+      title: 'New West Traffic Tracker',
       description: [`New West Traffic Tracker is an app for commuters who want to see live update camera feeds of New West traffic.`, 'This app was made ' 
     + 'in collab with the City of New Westminster. It\'s and app that uses data sets provided by New West and DriveBC, which allows for a quick way for drivers to actually see which way would be wisest to take for their commute.'],
       type: 'Mobile Development',
@@ -42,12 +42,12 @@ export class ProjectService {
       github: '',
       toolset: 'Laravel, PHP, MySQL, Bootstrap',
       coverImage: '../assets/images/budge.png',
-      images: ['../assets/images/bud1.png', '../assets/images/bud2.png', '../assets/images/buds_1.png']
+      images: ['../assets/images/bud1.png', '../assets/images/buds_1.png', '../assets/images/bud3.png']
     },
     {
       id: '4',
       title: 'victorbak.com',
-      description: [`You may have realized, that you're already on this site!`, 'This is a project of mine to show off work I\'ve done, and will be doing. It was a lot ' 
+      description: [`You may have realized that you're already on this site!`, 'This is a project of mine to show off work I\'ve done, and will be doing. It was a lot ' 
     + 'of fun building this site, as I wanted to code everything from scratch. I\'m proud to call this my portfolio. If you want to comment or criticize, don\'t hesitate to drop a message in the form below! :)'],
       type: 'Web Development',
       github: '',
@@ -57,11 +57,13 @@ export class ProjectService {
     },
   ]
 
+  //returns all project as an observable
   getProjects(): Observable<Project[]> {
     return of(this.projects);
   }
 
+  //returns project by id
   getProject(id: string): Observable<Project> {
-    return of(this.projects.find(hero => hero.id === id));
+    return of(this.projects.find(project => project.id === id));
   }
 }

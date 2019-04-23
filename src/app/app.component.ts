@@ -15,18 +15,18 @@ export let browserRefresh = false;
   ]
 })
 export class AppComponent {
-  private route: Router;
-  private subscription: Subscription;
+  // private _route: Router;
+  // private subscription;
+  ription: Subscription;
   title = "Victor Bak's Portfolio";
 
-  // Example in the constructor of you App Component
   constructor(private router: Router) {
-    this.subscription = router.events.subscribe((event) => {
-      if (event instanceof NavigationStart) {
-        browserRefresh = !router.navigated;
-        this.route.navigate(['/']);
-      }
-    });
+    // this.subscription = router.events.subscribe((event) => {
+    //   if (event instanceof NavigationStart) {
+    //     browserRefresh = !router.navigated;
+    //     this.route.navigate(['/']);
+    //   }
+    // });
   }
   
 }

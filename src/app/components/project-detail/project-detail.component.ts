@@ -12,9 +12,7 @@ import { Project } from '../../project';
   styleUrls: ['./project-detail.component.css'],
   animations: [
     detailAnimation
-  ],
-  //for styles to work on innerHTML markup
-  // encapsulation: ViewEncapsulation.None
+  ]
 })
 export class ProjectDetailComponent implements OnInit {
 
@@ -25,6 +23,7 @@ export class ProjectDetailComponent implements OnInit {
   private imageIndex;
   private body;
   private overlay;
+  private mobileIndex;
 
 
   constructor(
@@ -33,6 +32,7 @@ export class ProjectDetailComponent implements OnInit {
     private projectService: ProjectService,
   ) {}
   
+  //for animations
   @HostBinding('@pageAnimations')
 
   ngOnInit() {
@@ -40,6 +40,7 @@ export class ProjectDetailComponent implements OnInit {
     this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
     this.overlay = document.getElementById('image-overlay');
     this.body = document.getElementById('body')
+    this.mobileIndex = 0;
   }
 
   //scrolls to to element with id stored in fragment string (overlay)
@@ -58,6 +59,7 @@ export class ProjectDetailComponent implements OnInit {
   project : Project
   img: String
 
+  //returns project for display
   getProject(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.projectService.getProject(id)
@@ -65,11 +67,13 @@ export class ProjectDetailComponent implements OnInit {
     this.img = this.project.coverImage;
   }
 
+  //return to portfolio gallery
   goBack(): void {
     this.location.back();
   }
 
 
+  //Opens or closes image gallery, sets display image from images array
   view(index?: number): void {
     if(index != null) {
       this.imageIndex = index;
@@ -88,16 +92,38 @@ export class ProjectDetailComponent implements OnInit {
     }
   }
 
+  //next button for mobile view
+  mobileNext() {
+    if(this.mobileIndex == null) {
+      return;
+    }
+    if(this.mobileIndex < this.project.images.length - 1) {
+      this.mobileIndex++;
+    }
+    else {
+      if (this.mobileIndex == this.project.images.length - 1 ) {
+        this.mobileIndex = 0;
+      }
+    }
+  }
+
+  //next button for desktop view
   next(e : Event) {
-    e.stopPropagation(); 
+    e.stopPropagation();
+    if (this.imageIndex == null) {
+      return;
+    } 
+    //next image in array
     if(this.imageIndex < this.project.images.length - 1) {
       this.imageIndex++;
     }
     else {
+      //go back to first image if on last item
       if (this.imageIndex == this.project.images.length - 1 ) {
         this.imageIndex = 0;
       }
     }
+    //sets display image
     this.displayImage.src = this.project.images[this.imageIndex];
   }
 
@@ -113,5 +139,4 @@ export class ProjectDetailComponent implements OnInit {
       }
     }
   }
-
 }

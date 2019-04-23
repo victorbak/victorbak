@@ -8,6 +8,7 @@
                 <p class="title-text">{{project.title}}</p>
                 <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
             </div>
+            <!-- images that display on desktop version -->
             <div class="images">
                 <div *ngFor="let image of project.images; let i = index;"
                     class="img-box" 
@@ -16,12 +17,14 @@
                     (click)="view(i)">
                 </div>
             </div>
+            <!-- Images that display on mobile -->
             <div class="mobile-images">
-                <div *ngFor="let image of project.images; let i = index;"
+                <div 
                     class="img-box" 
-                    id="item{{i+1}}"
-                    [ngStyle]="{'background-image': 'url(' + image + ')'}">
+                    id="mobile-display"
+                    [ngStyle]="{'background-image': 'url( ' + project.images[mobileIndex] + ' )'}">
                 </div>
+                <p id="m-next" (click)="mobileNext()">Next Image &rarr;</p>
             </div>
             <div class="description">
                 <p *ngFor="let paragraph of project.description"
@@ -31,6 +34,7 @@
             </div>
         </div>
     </div>
+    <!-- overlay for image gallery -->
     <div id="image-overlay" (click)="view()">
         <p id="close">&#10005;</p>
         <div id="ok">
