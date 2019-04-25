@@ -1,3 +1,5 @@
+/* ---- COMPONENT CONTAINER ---- */
+
 .projects {
     width: auto;
     height: auto;
@@ -6,10 +8,8 @@
 .container {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     margin: auto;
     max-width: 1600px;
-    /* min-height: 100vh; */
     height: auto;
     padding: 0 60px;
 }
@@ -20,12 +20,7 @@
     padding-left: 60px;
 }
 
-.bg {
-    width: 1000px;
-    background-color: blue;
-    height: 1000px;
-}
-
+/* ---- PORTFOLIO GALLERY ---- */
 
 #gallery {
     width: 100%;
@@ -57,6 +52,8 @@
     background-position: center bottom;
 }
 
+/* ---- ANIMATED TEXT ON IMAGES ---- */
+
 .item-text {
     height: 100%;
     padding-left: 20px;
@@ -64,7 +61,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    /* pointer-events: none; */
 }
 
 .item-text h3 {
@@ -98,6 +94,9 @@
 .item-text h3, .item-text p {
     margin-top: 0;
 }
+
+
+/* ---- MEDIA QUERIES ---- */
 
 @media only screen and (max-width: 1400px) {
     #title {
@@ -147,7 +146,7 @@
 
 @media only screen and (max-width: 420px) {
     #gallery {
-        padding: 0 0;
+        padding: 0;
     }
      .gallery-item {
         width: 350px;

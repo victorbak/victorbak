@@ -35,6 +35,12 @@
     margin: 25px;
 }
 
+.title .back {
+    font-size: 22px;
+    text-decoration: underline;
+    padding: 15px;
+}
+
 .back {
     cursor: pointer;
 }
@@ -49,20 +55,18 @@
     width: 80vw;
 }
 
-.images {
+.images, .mobile-images {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
 .mobile-images {
-    display: flex;
-    justify-content: center;
-    width: 100%;
     display: none;
 }
 
 #m-next {
+    display: none;
     margin: 0 15px;
     text-align: right;
     cursor: pointer;
@@ -143,15 +147,6 @@
     text-align: center;
 }
 
-/* #prev {
-    width: 120px;
-    padding: 20px;
-    color: white;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: .2s ease-in-out;
-} */
-
 #prev:hover,
 #next:hover,
 #close:hover {
@@ -177,6 +172,9 @@
         flex-direction: column-reverse;
         text-align: center;
     }
+    .title .back {
+        margin: 0;
+    }
     .project-info {
         width: auto;
     }
@@ -194,6 +192,7 @@
         width: 400px;
         height: 200px;
         min-width: 160px;
+        background-size: contain;
     }
     #zoomed-image {
         height: 70vh;
@@ -208,22 +207,27 @@
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .description p {
         font-size: 16px;
     }
     .img-box {
-        width: 90vw;
-        height: 175px;
+        max-width: 90vw;
+        max-height: 250px;
         margin: 5px 10px;
+        text-align: center;
+        flex-shrink: 2;
     }
     .card {
         margin: 0;
     }
-    .images {
+    #zoomed-image, #controls, .images {
         display: none;
     }
     .mobile-images {
+        display: flex;
+    }
+    #m-next {
         display: block;
     }
     .mobile-images .img-box {
@@ -232,25 +236,16 @@
     .title {
         flex-direction: column-reverse;
     }
-    .title-text {
-        margin: 0;
-    }
-    .title .back {
-        text-align: left;
-    }
     .description {
         width: 90vw;
+    }
+    .description p {
+        padding-left: 20px;
     }
     .description .back {
         text-align: center;
         padding-top: 10px;
         display: block;
-    }
-    #zoomed-image {
-        display: none;
-    }
-    #controls {
-        display: none;
     }
 }
     

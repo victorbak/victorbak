@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
 import { ActivatedRoute,  } from '@angular/router';
 import { Location } from '@angular/common';
 import { detailAnimation } from '../../animations';
@@ -24,6 +24,7 @@ export class ProjectDetailComponent implements OnInit {
   private body;
   private overlay;
   mobileIndex;
+  key;
 
 
   constructor(
@@ -107,9 +108,26 @@ export class ProjectDetailComponent implements OnInit {
     }
   }
 
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if(this.isOverlayOn) {
+      this.key = event.keyCode;
+      console.log(this.key);
+      //left arrow pressed, prev image
+      if(this.key === 37) {
+        this.prev();
+        //right arrow pressed next image
+      } else if (this.key === 39) {
+        this.next();
+      }
+    }
+  }
+
   //next button for desktop view
-  next(e : Event) {
-    e.stopPropagation();
+  next(e? : Event) {
+    if (e) {
+      e.stopPropagation(); 
+    }
     if (this.imageIndex == null) {
       return;
     } 
@@ -127,8 +145,10 @@ export class ProjectDetailComponent implements OnInit {
     this.displayImage.src = this.project.images[this.imageIndex];
   }
 
-  prev(e : Event) {
-    e.stopPropagation();
+  prev(e? : Event) {
+    if(e) {
+      e.stopPropagation();
+    }
     if (this.imageIndex == 0 ) {
       this.imageIndex = (this.project.images.length - 1);
       this.displayImage.src = this.project.images[this.imageIndex];

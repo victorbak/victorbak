@@ -24,8 +24,8 @@
                     id="mobile-display"
                     [ngStyle]="{'background-image': 'url( ' + project.images[mobileIndex] + ' )'}">
                 </div>
-                <p id="m-next" (click)="mobileNext()">Next Image &rarr;</p>
             </div>
+            <p id="m-next" (click)="mobileNext()">Next Image &rarr;</p>
             <div class="description">
                 <p *ngFor="let paragraph of project.description"
                     class="desc-text">{{paragraph}}</p>
@@ -37,7 +37,7 @@
     <!-- overlay for image gallery -->
     <div id="image-overlay" (click)="view()">
         <p id="close">&#10005;</p>
-        <div id="ok">
+        <div id="ok"> 
             <img id="zoomed-image" src="" (click)="next($event)" >
             <div id="controls">
                 <p id="prev" (click)="prev($event)">&larr; Prev</p>

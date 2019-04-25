@@ -2,8 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { FirebaseService } from '../../firebase.service';
 
-import { Message } from '../../message';
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -12,7 +10,7 @@ import { Message } from '../../message';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
-
+  @ViewChild('form') myForm;
   constructor(
     private fb: FormBuilder,
     public firebaseService: FirebaseService
@@ -32,7 +30,8 @@ export class ContactComponent implements OnInit {
         Validators.email
       ]],
       message: ['', [
-        Validators.required
+        Validators.required,
+        Validators.maxLength(750)
       ]]
     });
     this.contactForm.valueChanges.subscribe(console.log)
@@ -55,20 +54,20 @@ export class ContactComponent implements OnInit {
   resetFields(){
     this.contactForm = this.fb.group({
       name: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
       message: new FormControl('', Validators.required),
     });
   }
 
-  onSubmit(value, formDirective : NgForm){
+  onSubmit(value){
     console.log("value: " + value);  
     this.firebaseService.addMessage(value)
     .then(
       res => {
+        alert("Message submitted");
+        this.myForm.resetForm();  
         this.resetFields();
       }
     )
   }
-
-
 }

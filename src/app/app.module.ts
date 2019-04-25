@@ -1,32 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
-import { callLifecycleHooksChildrenFirst } from '@angular/core/src/view/provider';
-// import { useAnimation } from '@angular/core/src/animation/dsl';
-import { isListLikeIterable } from '@angular/core/src/change_detection/change_detection_util';
-import { getLocaleCurrencySymbol, WeekDay } from '@angular/common';
-import { clearOverrides } from '@angular/core/src/view';
-import { BOOL_TYPE } from '@angular/compiler/src/output/output_ast';
-import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/component_factory_resolver';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
+//Firebase 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
+// Angular material imports
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
-import { MatListModule } from '@angular/material/list';
 
-
-import { HeaderComponent } from './components/shared/header.component';
+//Components and routing
 import { CoverComponent } from './components/cover/cover.component';
 import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -37,12 +25,12 @@ import { ContactComponent } from './components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     CoverComponent,
     AboutComponent,
     GalleryComponent,
     routingComponents,
     ContactComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -52,13 +40,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     MatButtonModule,
-    MatCheckboxModule,
-    MatChipsModule,
     MatInputModule,
-    MatSelectModule,
     MatCardModule,
-    MatListModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

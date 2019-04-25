@@ -1,15 +1,12 @@
-
-/* for parallaxing image */
 .container::before {
     /* parallaxing image */
     content: "";
     position: absolute;
     width: 100%;
-    background-image: url("../../../assets/images/IMG_20190204_181018.png");
+    background-image: url("../../../assets/images/manila_sky.png");
 
     height: 100%;
     background-attachment: fixed;
-    background-position: left-top;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -18,6 +15,8 @@
     height: 100%;
     width: 100%;
 }
+
+/* Logo and Name */
 
 .toppings {
     display: flex;

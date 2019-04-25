@@ -8,7 +8,6 @@ import { Project } from './project';
 export class ProjectService {
 
   constructor() { }
-
   
   projects: Project[] = [
     {
@@ -31,7 +30,7 @@ export class ProjectService {
       github: '',
       toolset: 'Android, Java',
       coverImage: '../assets/images/nw4.png',
-      images: ['../assets/images/nw2.png', '../assets/images/nw1.png', '../assets/images/nw3.png']
+      images: ['../assets/images/nws2.png', '../assets/images/nws1.png', '../assets/images/nws3.png']
     },
     {
       id: '3',
