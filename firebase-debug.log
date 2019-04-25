@@ -1,29 +1,29 @@
-[debug] [2019-04-25T01:00:32.068Z] ----------------------------------------------------------------------
-[debug] [2019-04-25T01:00:32.084Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\victo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2019-04-25T01:00:32.084Z] CLI Version:   6.7.0
-[debug] [2019-04-25T01:00:32.084Z] Platform:      win32
-[debug] [2019-04-25T01:00:32.084Z] Node Version:  v8.9.4
-[debug] [2019-04-25T01:00:32.084Z] Time:          Wed Apr 24 2019 18:00:32 GMT-0700 (Pacific Daylight Time)
-[debug] [2019-04-25T01:00:32.084Z] ----------------------------------------------------------------------
+[debug] [2019-04-25T04:25:21.750Z] ----------------------------------------------------------------------
+[debug] [2019-04-25T04:25:21.765Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\victo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-04-25T04:25:21.765Z] CLI Version:   6.7.0
+[debug] [2019-04-25T04:25:21.765Z] Platform:      win32
+[debug] [2019-04-25T04:25:21.765Z] Node Version:  v8.9.4
+[debug] [2019-04-25T04:25:21.765Z] Time:          Wed Apr 24 2019 21:25:21 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-04-25T04:25:21.765Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-04-25T01:00:32.112Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-04-25T01:00:32.112Z] > authorizing via signed-in user
-[debug] [2019-04-25T01:00:32.112Z] [iam] checking project victor-16e5b for permissions ["firebase.projects.get"]
-[debug] [2019-04-25T01:00:32.116Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2019-04-25T01:00:32.116Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2019-04-25T04:25:21.772Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-25T04:25:21.772Z] > authorizing via signed-in user
+[debug] [2019-04-25T04:25:21.772Z] [iam] checking project victor-16e5b for permissions ["firebase.projects.get"]
+[debug] [2019-04-25T04:25:21.788Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-04-25T04:25:21.788Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2019-04-25T01:00:32.346Z] <<< HTTP RESPONSE 200
-[debug] [2019-04-25T01:00:32.353Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/victor-16e5b:testIamPermissions  
+[debug] [2019-04-25T04:25:22.020Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-25T04:25:22.020Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/victor-16e5b:testIamPermissions  
 
-[debug] [2019-04-25T01:00:32.832Z] <<< HTTP RESPONSE 200
-[debug] [2019-04-25T01:00:32.832Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/victor-16e5b  
+[debug] [2019-04-25T04:25:22.336Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-25T04:25:22.336Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/victor-16e5b  
  
-[debug] [2019-04-25T01:00:33.104Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-25T04:25:22.695Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\victo\Desktop\Work\victorbak'...
 [info] 
-[debug] [2019-04-25T01:00:33.104Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/180989770767/clients/_:getWebAppConfig  
+[debug] [2019-04-25T04:25:22.699Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/180989770767/clients/_:getWebAppConfig  
  
-[debug] [2019-04-25T01:00:33.419Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-25T04:25:23.053Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: dist
 [info] +  hosting: Local server: http://localhost:5000

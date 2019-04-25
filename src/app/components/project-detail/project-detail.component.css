@@ -36,13 +36,13 @@
 }
 
 .title .back {
-    font-size: 22px;
-    text-decoration: underline;
     padding: 15px;
 }
 
 .back {
     cursor: pointer;
+    text-decoration: underline;
+    font-size: 22px;
 }
 
 .back:hover {
@@ -208,6 +208,9 @@
 
 
 @media only screen and (max-width: 500px) {
+    .title p {
+        margin: 5px;
+    }
     .description p {
         font-size: 16px;
     }
@@ -235,6 +238,9 @@
     }
     .title {
         flex-direction: column-reverse;
+    }
+    .title-text {
+        margin: 0;
     }
     .description {
         width: 90vw;

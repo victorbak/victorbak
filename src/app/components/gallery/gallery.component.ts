@@ -2,6 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { Project } from '../../project';
 import { ProjectService } from '../../project.service';
 import { galleryAnimation } from '../../animations';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-gallery',
@@ -16,23 +17,24 @@ export class GalleryComponent implements OnInit {
   private checked: Boolean = false;
   private fragment: string;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.getProjects();
   }
+
   
-  // ngAfterViewChecked(): void {
-  //   if(!this.checked) {
-  //   try {
-  //       if(this.fragment) {
-  //           document.querySelector('#' + this.fragment).scrollIntoView();
-  //           this.checked = true;
-  //       }
-  //   } catch (e) { }
-  //   return;
-  // }
-  // }
+  ngAfterViewChecked(): void {
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+    try {
+        if(this.fragment) {
+            document.querySelector('#' + this.fragment).scrollIntoView();
+            this.checked = true;
+        }
+    } catch (e) { }
+    return;
+  }
+
 
   @HostBinding('@pageAnimations')
   projects: Project[];
