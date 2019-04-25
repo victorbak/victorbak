@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="content">
+      <div class="text">
+          <p id="title">Away From Desk.</p>
+          <p class="sub">If you like what you see and want to get in touch, don't hesitate to reach out!</p>
+          <p class="sub">I'm always open to new projects and opportunities. Always looking forward to meeting new people.</p>
+      </div>
+    <mat-card class="form-card">
+      <mat-card-header>
+          <!-- <mat-card-title id="card-title">Drop A Message</mat-card-title> -->
+          <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        </mat-card-header>
+      <form class="contact-form" #form="ngForm" [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit(contactForm.value)"> 
+
+        <mat-form-field class="field">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name"
+                          placeholder="Name">
+          <mat-error *ngIf="name.touched && name.pristine">
+              No name entered.
+          </mat-error>    
+        </mat-form-field>
+
+        <mat-form-field class="field">
+          <mat-label>Email</mat-label>
+            <input matInput formControlName="email"
+                            placeholder="Email">
+            <mat-error *ngIf="email.invalid && email.touched" >
+                Invalid email
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message"
+                                placeholder="Type a message"
+                                cdkTextareaAutosize
+                                #autosize="cdkTextareaAutosize"
+                                cdkAutosizeMinRows="3"
+                                cdkAutosizeMaxRows="10">hi</textarea>
+            <mat-error *ngIf="message.touched && message.pristine">
+                Empty message body
+            </mat-error>
+        </mat-form-field>
+
+        <div class="row submit-button-container">
+          <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!contactForm.valid">Send Message</button>
+        </div>
+
+      </form>
+    </mat-card>
+  </div>
+</div>

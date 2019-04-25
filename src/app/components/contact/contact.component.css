@@ -1,0 +1,133 @@
+.container {
+    height: 90vh;
+    width: 100%;
+    /* border: 1px solid red; */
+    position: relative;
+    
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../assets/images/mydesk.png");
+    background-position: top-left;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.text {
+    width: 580px;
+    margin: 100px;
+    padding: 10px;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8); */
+    transition: 0.2s;
+    /* background-color: rgba(0,0,0,0.7); */
+    position: relative;
+    z-index: 3;
+} 
+
+.text h1,
+.text p {
+    color: white;
+
+}
+
+#title {
+    font-size: 50px;
+}
+
+.form-card {
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.842);
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    /* min-width: 150px; */
+    width: 500px;
+}
+
+.submit-button {
+    margin-top: 10px;
+    float: right;
+}
+
+@media only screen and (max-width: 1400px) {
+    .text {
+        margin: 25px 50px 50px 50px;
+    }
+    .form-card {
+        margin: 20px;
+    }
+    .contact-form {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .text {
+        margin: 10px;
+    }
+    #text {
+        margin-top: 0;
+    }
+    #title {
+        margin-top: 0;
+        font-size: 42px;
+    }
+    .form-card {
+        margin: 0 10px 20px 10px;
+    }
+    .contact-form {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .text {
+        margin: 10px;
+    }
+    #title {
+        font-size: 38px;
+    }
+    .contact-form {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .content {
+        flex-wrap: wrap;
+    }
+    .container {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .contact-form {
+        width: 300px;
+    }
+    #title {
+        font-size: 30px;
+    }
+    .sub {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .text {
+        width: 90vw;
+    }
+    .contact-form {
+        width: 200px;
+    }
+}

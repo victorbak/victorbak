@@ -1,0 +1,257 @@
+.container {
+    padding: 20px;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#project2 {
+    background-position: bottom center;
+} 
+
+.card {
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.title p {
+    margin: 25px;
+}
+
+.title .back {
+    padding: 15px;
+}
+
+.back {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+.back:hover {
+    color: rgb(156, 75, 75);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.images, .mobile-images {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.mobile-images {
+    display: none;
+}
+
+#m-next {
+    display: none;
+    margin: 0 15px;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+.img-box {
+    width: 70%;
+    padding-top: 20.25%;
+    margin: 10px;
+    opacity: 1;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.description {
+    padding: 15px;
+    max-width: 1100px;
+}
+
+.description .back {
+    display: none;
+    text-align: right;
+}
+
+#image-overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+    z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#ok {
+    width: 100%;
+    height: 100%;
+}
+
+#close {
+    z-index: 5;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 81%;
+    top: 3%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .2s ease-in-out;
+    padding: 10px;
+    }
+
+
+#controls {
+    display: flex;
+    position: relative;
+    top: 77%;
+    z-index: 5;
+    width: 100%;
+    justify-content: center;
+}
+
+
+#next, #prev {
+    width: 120px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .2s ease-in-out;
+    text-align: center;
+}
+
+#prev:hover,
+#next:hover,
+#close:hover {
+    color: rgb(156, 75, 75);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#zoomed-image {
+    position: absolute;
+    width: 70vw;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    /* color: white; */
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    z-index: 3;
+}
+
+
+@media only screen and (max-width: 1010px) {
+    .title {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .title .back {
+        margin: 0;
+    }
+    .project-info {
+        width: auto;
+    }
+    .description {
+        width: 400px;
+    }
+    .description .back {
+        visibility: visible;
+    }
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-box {
+        width: 400px;
+        height: 200px;
+        min-width: 160px;
+        background-size: contain;
+    }
+    #zoomed-image {
+        height: 70vh;
+        width: 80vw;
+    }
+    #controls {
+        top: 73%;
+    }
+    #prev, #next {
+        padding: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .title p {
+        margin: 5px;
+    }
+    .description p {
+        font-size: 16px;
+    }
+    .img-box {
+        max-width: 90vw;
+        max-height: 250px;
+        margin: 5px 10px;
+        text-align: center;
+        flex-shrink: 2;
+    }
+    .card {
+        margin: 0;
+    }
+    #zoomed-image, #controls, .images {
+        display: none;
+    }
+    .mobile-images {
+        display: flex;
+    }
+    #m-next {
+        display: block;
+    }
+    .mobile-images .img-box {
+        cursor: default;
+    }
+    .title {
+        flex-direction: column-reverse;
+    }
+    .title-text {
+        margin: 0;
+    }
+    .description {
+        width: 90vw;
+    }
+    .description p {
+        padding-left: 20px;
+    }
+    .description .back {
+        text-align: center;
+        padding-top: 10px;
+        display: block;
+    }
+}
+    

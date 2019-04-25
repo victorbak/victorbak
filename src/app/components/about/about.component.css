@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../assets/images/cpu_dark3.png");
+    background-position: top-left;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ---- TEXT ---- */
+
+
+.card {
+    width: 580px;
+    margin: 100px;
+    padding: 10px;
+    transition: 0.2s;
+    position: relative;
+    z-index: 3;
+}
+
+.text {
+    color: azure;
+}
+
+/* ---- PHOTO OF ME ---- */
+
+.photo {
+    margin: 100px;
+}
+
+
+.photo img {
+    border: 3px solid white;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: none;
+    object-position: 32% 20%;
+    transition: .2s;
+    
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+@media only screen and (max-width: 1340px) {
+    .title {
+        font-size: 36px;
+    }
+    .card {
+        width: 500px;
+        margin: 50px;
+    }
+    text p {
+        font-size: 14px;
+    }
+    .photo {
+        margin: 50px;
+    }
+    .photo img {
+        width: 250px;
+        object-position: 32% 26%;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .title {
+        font-size: 32px;
+    }
+    .card {
+        margin: 50px;
+    }
+    text p {
+        font-size: 14px;
+    }
+    .photo {
+        margin-left: 10px;
+        margin-right: 30px;
+    }
+    .photo img {
+        width: 225px;
+        object-position: 32% 26%;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .card {
+        width: 450px;
+    }
+}
+
+
+@media only screen and (max-width: 816px) {
+    .container {
+        align-items: center;
+    }
+    .card {
+        margin: 10px 10px;
+        max-width: 450px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    text p {
+        font-size: 16px;
+    }
+    .photo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .container {
+        padding: 10px;
+    }
+    .title {
+        font-size: 28px;
+        text-align: center;
+    }
+    .text p {
+        font-size: 15px;
+    }
+    .card {
+        max-width: 300px;
+    }
+}

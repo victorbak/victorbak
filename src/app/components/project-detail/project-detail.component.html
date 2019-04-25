@@ -1,0 +1,50 @@
+<div class="container"
+     [ngStyle]="{'background-image': 'url(' + project.coverImage + ')'}"
+     id="project{{project.id}}">
+    <div id="details" class="overlay"></div>
+    <div class="card"> 
+        <div class="project-info">
+            <div class="title">
+                <p class="title-text">{{project.title}}</p>
+                <p class="back" routerLink="/gallery">&larr; Back to projects</p> 
+            </div>
+            <!-- images that display on desktop version -->
+            <div class="images">
+                <div *ngFor="let image of project.images; let i = index;"
+                    class="img-box" 
+                    id="item{{i+1}}"
+                    [ngStyle]="{'background-image': 'url(' + image + ')'}"
+                    (click)="view(i)">
+                </div>
+            </div>
+            <!-- Images that display on mobile -->
+            <div class="mobile-images">
+                <div 
+                    class="img-box" 
+                    id="mobile-display"
+                    [ngStyle]="{'background-image': 'url( ' + project.images[mobileIndex] + ' )'}">
+                </div>
+            </div>
+            <p id="m-next" (click)="mobileNext()">Next Image &rarr;</p>
+            <div class="description">
+                <p *ngFor="let paragraph of project.description"
+                    class="desc-text">{{paragraph}}</p>
+                <p>Built with: {{project.toolset}}</p>
+                <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
+            </div>
+        </div>
+    </div>
+    <!-- overlay for image gallery -->
+    <div id="image-overlay" (click)="view()">
+        <p id="close">&#10005;</p>
+        <div id="ok"> 
+            <img id="zoomed-image" src="" (click)="next($event)" >
+            <div id="controls">
+                <p id="prev" (click)="prev($event)">&larr; Prev</p>
+                <p id="next" (click)="next($event)">Next &rarr;</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
