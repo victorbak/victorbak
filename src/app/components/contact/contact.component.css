@@ -3,7 +3,6 @@
     width: 100%;
     /* border: 1px solid red; */
     position: relative;
-    
 }
 
 
@@ -39,11 +38,12 @@
 
 #title {
     font-size: 50px;
+    margin-top: 40px;
 }
 
 .form-card {
     width: auto;
-    background-color: rgba(255, 255, 255, 0.842);
+    background-color: rgba(255, 255, 255, 0.78);
 }
 
 
@@ -74,12 +74,9 @@
 @media only screen and (max-width: 975px) {
     .text {
         margin: 10px;
-    }
-    #text {
-        margin-top: 0;
+        padding: 10px;
     }
     #title {
-        margin-top: 0;
         font-size: 42px;
     }
     .form-card {
@@ -105,9 +102,13 @@
 @media only screen and (max-width: 800px) {
     .content {
         flex-wrap: wrap;
+        justify-content: center;
     }
     .container {
         height: auto;
+    }
+    .form-card {
+        margin-bottom: 40px;
     }
 }
 

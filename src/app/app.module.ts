@@ -21,6 +21,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactComponent } from './components/contact/contact.component';
     GalleryComponent,
     routingComponents,
     ContactComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

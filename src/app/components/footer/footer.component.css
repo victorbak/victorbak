@@ -1,0 +1,54 @@
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    z-index: 10;
+}
+
+.text {
+    color: white;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin: 10px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .text {
+        font-size: 12px;
+    }
+    .icon {
+        margin: 10px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .social .text {
+        display: none;
+    }
+}
