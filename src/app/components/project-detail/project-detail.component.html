@@ -19,17 +19,19 @@
             </div>
             <!-- Images that display on mobile -->
             <div class="mobile-images">
-                <div 
-                    class="img-box" 
+                <div class="img-box" 
                     id="mobile-display"
                     [ngStyle]="{'background-image': 'url( ' + project.images[mobileIndex] + ' )'}">
                 </div>
             </div>
-            <p id="m-next" (click)="mobileNext()">Next Image &rarr;</p>
+            <div class="mobile-buttons">
+                <p id="m-next" (click)="mobileNext()">Next Image &rarr;</p>
+            </div>
             <div class="description">
                 <p *ngFor="let paragraph of project.description"
                     class="desc-text">{{paragraph}}</p>
                 <p>Built with: {{project.toolset}}</p>
+                <a href=" {{ project.github }} " title="Visit on Github!" *ngIf=" project.github != ''"><img id="logo" src="../../../assets/images/gh.png"></a>
                 <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
             </div>
         </div>

@@ -65,8 +65,16 @@
     display: none;
 }
 
-#m-next {
+.mobile-buttons {
     display: none;
+}
+
+#logo {
+    width: 32px;
+    height: 32px;
+}
+
+#m-next {
     margin: 0 15px;
     text-align: right;
     cursor: pointer;
@@ -230,8 +238,23 @@
     .mobile-images {
         display: flex;
     }
+    .mobile-buttons {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+    }
+    #logo {
+        margin: 0;
+        width: 32px;
+        height: 32px;
+    }
     #m-next {
-        display: block;
+        margin: 0;
+        text-decoration: underline;
+        padding: 10px;
+        font-size: 20px;
     }
     .mobile-images .img-box {
         cursor: default;
@@ -239,14 +262,16 @@
     .title {
         flex-direction: column-reverse;
     }
+    .title .back {
+        font-size: 20px;
+    }
     .title-text {
         margin: 0;
     }
     .description {
         width: 90vw;
-    }
-    .description p {
         padding-left: 20px;
+        padding-top: 0px;
     }
     .description .back {
         text-align: center;
