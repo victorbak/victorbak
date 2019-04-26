@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
 import { ActivatedRoute,  } from '@angular/router';
 import { Location } from '@angular/common';
 import { detailAnimation } from '../../animations';
@@ -31,6 +32,7 @@ export class ProjectDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private projectService: ProjectService,
+    private sanitizer:DomSanitizer
   ) {}
   
   //for animations
@@ -66,6 +68,10 @@ export class ProjectDetailComponent implements OnInit {
     this.projectService.getProject(id)
     .subscribe(project => this.project = project);
     this.img = this.project.coverImage;
+  }
+
+  sanitize(url:string){
+    return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 
   //return to portfolio gallery
