@@ -13,7 +13,7 @@ export class ProjectService {
     {
       id: '1',
       title: 'Beavertail',
-      description: ['Beavertail is a social app for users who want to share their local news to the world, shedding light on stories that would otherwise be unheard of in a global scale.',
+      description: ['Beavertail is a social app for users who want to share their local news to the world, shedding light on stories that would otherwise be unheard of, in a global scale.',
       'This web-app was built with three other peers. I had a lot of fun working on this one, because I got to primarily develop the backend. I also got to assist with some front-end and made services for data to be displayed on the front-end.'],
       type: 'Web Development',
       github: 'https://github.com/victorbak/BeaverTail',
