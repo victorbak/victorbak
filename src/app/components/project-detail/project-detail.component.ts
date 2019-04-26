@@ -3,7 +3,7 @@ import { ActivatedRoute,  } from '@angular/router';
 import { Location } from '@angular/common';
 import { detailAnimation } from '../../animations';
 
-import { ProjectService }  from '../../project.service';
+import { ProjectService }  from '../../services/project.service';
 import { Project } from '../../project';
 
 @Component({
@@ -19,12 +19,12 @@ export class ProjectDetailComponent implements OnInit {
   private fragment: string;
   checked: boolean = false;
   private isOverlayOn: boolean = false;
+  private imageIndex: number;
   private displayImage;
-  private imageIndex;
-  private body;
+  private body; 
   private overlay;
   mobileIndex;
-  key;
+  key: number;
 
 
   constructor(

@@ -192,10 +192,9 @@
         width: 400px;
         height: 200px;
         min-width: 160px;
-        background-size: contain;
     }
     #zoomed-image {
-        height: 70vh;
+        height: 400px;
         width: 80vw;
     }
     #controls {
@@ -220,6 +219,7 @@
         margin: 5px 10px;
         text-align: center;
         flex-shrink: 2;
+        background-size: contain;
     }
     .card {
         margin: 0;

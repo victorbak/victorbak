@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Project } from '../../project';
-import { ProjectService } from '../../project.service';
+import { ProjectService } from '../../services/project.service';
 import { galleryAnimation } from '../../animations';
 import { ActivatedRoute } from '@angular/router';
 
