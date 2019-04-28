@@ -34,8 +34,9 @@
                 <a *ngIf="project.github"
                   [href]="project.github" 
                   target="_blank" 
+                  rel="noopener"
                   title="Visit on Github!">
-                  <img id="logo" src="../../../assets/images/gh.png">
+                  <img id="logo" src="../../../assets/images/gh.png" alt="link to github page">
                 </a>
                 <p class="back" routerLink="/gallery" fragment="top">&larr; Back to projects</p> 
             </div>
@@ -45,7 +46,7 @@
     <div id="image-overlay" (click)="view()">
         <p id="close">&#10005;</p>
         <div id="ok"> 
-            <img id="zoomed-image" src="" (click)="next($event)" >
+            <img id="zoomed-image" src="" alt="zoomed screenshot of project"(click)="next($event)" >
             <div id="controls">
                 <p id="prev" (click)="prev($event)">&larr; Prev</p>
                 <p id="next" (click)="next($event)">Next &rarr;</p>
