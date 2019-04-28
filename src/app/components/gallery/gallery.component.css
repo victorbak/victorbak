@@ -14,7 +14,7 @@
     padding: 0 60px;
 }
 
-#title {
+.title {
     margin-left: 100px;
     display: block;
     padding-left: 60px;
@@ -99,7 +99,7 @@
 /* ---- MEDIA QUERIES ---- */
 
 @media only screen and (max-width: 1400px) {
-    #title {
+    .title {
         margin-left: 50px; 
     }
 }
@@ -120,7 +120,7 @@
 
 
 @media only screen and (max-width: 800px) {
-    #title {
+    .title {
         margin-left: 0;
         display: block;
         text-align: center;
