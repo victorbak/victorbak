@@ -46,7 +46,8 @@
 }
 
 .back:hover {
-    color: rgb(156, 75, 75);
+    /* color: rgb(156, 75, 75); */
+    opacity: .5;
 }
 
 .project-info {
@@ -218,7 +219,7 @@
     .title p {
         margin: 5px;
     }
-    .description p {
+    .description .desc-text {
         font-size: 16px;
     }
     .img-box {
@@ -262,7 +263,7 @@
     .title {
         flex-direction: column-reverse;
     }
-    .title .back {
+    .back {
         font-size: 20px;
     }
     .title-text {
