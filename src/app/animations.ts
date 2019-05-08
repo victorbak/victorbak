@@ -3,7 +3,7 @@ import { trigger, style, transition, animate, query, stagger } from '@angular/an
   export const detailAnimation = 
   trigger('pageAnimations', [
     transition(':enter', [
-      query(':self, .title > *, .images > *, .description > *', [
+      query(':self, .container, .title > *, .images > *, .description > *', [
         style({ opacity: 0 }),
         stagger(110, [
           animate('350ms ease-out', style({ opacity: 1 }))
@@ -27,11 +27,11 @@ import { trigger, style, transition, animate, query, stagger } from '@angular/an
   export const coverAnimation = 
   trigger('pageAnimations', [
     transition(':enter', [
-      query(':self, .logo > *, .name > *', [
+      query('.logo > *, .name > *', [
         style({ opacity: 0 }),
         stagger(300, [
-          animate('500ms ease-in-out', style({ opacity: 1 }))
+          animate('400ms 700ms ease-in-out', style({ opacity: 1 }))
         ])
-      ])
+      ]),
     ])
   ]);
