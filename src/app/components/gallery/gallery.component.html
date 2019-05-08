@@ -4,7 +4,7 @@
     <div id="gallery">
       <div class="row">
         <div *ngFor="let project of projects; let i = index"
-             [ngStyle]="{'background-image': 'url(' + project.coverImage + ')'}"
+             [ngStyle]="{'background-image': 'url(' + project.coverImage[0] + ')'}"
              routerLink="/detail/{{project.id}}"
              fragment="details"
              id="item{{i+1}}"

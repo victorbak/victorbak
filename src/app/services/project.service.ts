@@ -18,7 +18,7 @@ export class ProjectService {
       type: 'Web Development',
       github: 'https://github.com/victorbak/BeaverTail',
       toolset: 'Angular, NodeJS, ExpressJS, MongoDB, Bootstrap',
-      coverImage: '../../../assets/images/bt2c.png',
+      coverImage: ['../../../assets/images/bt2c1.png', '../../../assets/images/bt2cb.png'],
       images: ['../../../assets/images/B2.png', '../../../assets/images/B3.png', '../../../assets/images/B4.png']
     },
     {
@@ -29,7 +29,7 @@ export class ProjectService {
       type: 'Mobile Development',
       github: 'https://github.com/victorbak/NewWestTrafficTracker',
       toolset: 'Android, Java',
-      coverImage: '../assets/images/nw4.png',
+      coverImage: ['../assets/images/nw41.png','./assets/images/nw4b.png'],
       images: ['../assets/images/nws2.png', '../assets/images/nws1.png', '../assets/images/nws3.png']
     },
     {
@@ -40,7 +40,7 @@ export class ProjectService {
       type: 'Web Development',
       github: 'https://github.com/victorbak/budge',
       toolset: 'Laravel, PHP, MySQL, Bootstrap',
-      coverImage: '../assets/images/budge.png',
+      coverImage: ['../assets/images/budge1.png','../assets/images/budgeb.png'],
       images: ['../assets/images/bud1.png', '../assets/images/buds_1.png', '../assets/images/bud3.png']
     },
     {
@@ -51,7 +51,7 @@ export class ProjectService {
       type: 'Web Development',
       github: 'https://github.com/victorbak/victorbak',
       toolset: 'Angular, Firebase',
-      coverImage: '../assets/images/v0.png',
+      coverImage: ['../assets/images/v01.png','../assets/images/v0b.png'],
       images: ['../assets/images/vb2.png', '../assets/images/vb3.png', '../assets/images/vb4.png']
     },
   ]

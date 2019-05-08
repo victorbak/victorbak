@@ -67,7 +67,7 @@ export class ProjectDetailComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.projectService.getProject(id)
     .subscribe(project => this.project = project);
-    this.img = this.project.coverImage;
+    this.img = this.project.coverImage[0];
   }
 
   sanitize(url:string){

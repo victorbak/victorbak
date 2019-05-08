@@ -46,8 +46,7 @@
 }
 
 .back:hover {
-    /* color: rgb(156, 75, 75); */
-    opacity: .5;
+    color: rgb(156, 75, 75);
 }
 
 .project-info {

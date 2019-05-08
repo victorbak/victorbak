@@ -5,6 +5,6 @@ export class Project {
     description: String[];
     github: String;
     toolset: String;
-    coverImage: String;
+    coverImage: String[];
     images: string[];
 }

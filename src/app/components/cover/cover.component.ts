@@ -14,11 +14,11 @@ export class CoverComponent implements OnInit {
   constructor() { }
 
   @HostBinding('@pageAnimations')
-
   name = "Victor Bak";
   title = "Web Developer";
 
-  ngOnInit() {
-  }
 
+  ngOnInit() {
+    
+  }
 }
